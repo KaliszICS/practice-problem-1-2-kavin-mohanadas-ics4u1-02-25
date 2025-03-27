@@ -1,41 +1,51 @@
+import java.util.InputMismatchException;
+
 public class PracticeProblem {
 
+	public static void main(String[] args) {
 
-		public static Boolean validIndex(int[] intArray, int index) {
-			try {
-				int temp  = intArray[index];
-				return true;
+	}
 
-			}
 
-			catch(ArrayIndexOutOfBoundsException e) {
-				return false;
-			}
+
+	public static boolean validIndex(int arr1[], int num1) {
+
+		try {
+			int check = arr1[num1];
+			return true;
+
+	}
+
+	catch(ArrayIndexOutOfBoundsException e) {
+
+	 return false;
+
+	}
+	}
+
+
+	public static int divide(int num2, int num3) {
+		try {
+			int b = num2/num3;
+			return b;
 		}
 
+	 catch(ArithmeticException e) {
+		return 0;
+	 }
+	}
 
-		public static int divide(int one, int two) {
-			try { 
-				return one/two;
-			}
-			catch(ArithmeticException e) {
-				return 0;
-			}
+
+	 public static int safeConvertStringtoInt(String word) {
+		try {
+
+		int a = Integer.parseInt(word);
+		return a;
+
 		}
-
-		public static int safeConvertStringtoInt(String string) {
-			try { 
-				return Integer.parseInt(string);
-
-			}
-			catch (NumberFormatException e) {
-				return 0;
-			}
+		catch (NumberFormatException e) {
+			return 0;
 		}
-
-
-	
-
-	
+	}
 
 }
